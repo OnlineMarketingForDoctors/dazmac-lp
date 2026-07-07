@@ -264,13 +264,15 @@ ul { list-style:none; padding:0; margin:0; }
   background-size: cover;
   background-position: center;
   transform: scale(1.04);
-  filter: brightness(.72);
+  filter: brightness(.82);
 }
 .hero-overlay {
   position: absolute; inset: 0;
   background:
-    linear-gradient(180deg, rgba(6,21,34,.55) 0%, rgba(6,21,34,.65) 60%, rgba(6,21,34,.92) 100%),
-    linear-gradient(110deg, rgba(6,21,34,.92) 0%, rgba(6,21,34,.55) 45%, rgba(6,21,34,.2) 100%);
+    /* subtle bottom grounding for the meta bar / bullets */
+    linear-gradient(180deg, rgba(6,21,34,0) 50%, rgba(6,21,34,.15) 72%, rgba(6,21,34,.5) 100%),
+    /* opaque on the left for text legibility, fading to clear on the right so the image shows through */
+    linear-gradient(100deg, rgba(6,21,34,.88) 0%, rgba(6,21,34,.72) 30%, rgba(6,21,34,.42) 52%, rgba(6,21,34,.12) 70%, rgba(6,21,34,0) 82%);
 }
 .hero-grain {
   position: absolute; inset: 0;
