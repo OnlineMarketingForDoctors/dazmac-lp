@@ -1,0 +1,491 @@
+/* ============================================================
+   DAZMAC — Boat / Yacht Imports — page-specific styles
+   Inherits everything from styles.css
+   ============================================================ */
+
+/* Hero — shift focus slightly right so headline space stays clean */
+.hero-boats .hero-media {
+  background-position: 65% center !important;
+}
+
+/* ============================================================
+   VESSEL SIZE GRID (Small / Medium / Large)
+   ============================================================ */
+.section-vessels { padding-bottom: 180px; }
+.vessel-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.vessel-card {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  min-height: 560px;
+  isolation: isolate;
+  transition: transform .35s cubic-bezier(.2,.7,.3,1.1), box-shadow .3s ease;
+  box-shadow: 0 30px 60px -30px rgba(0,0,0,.6);
+}
+.vessel-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 40px 70px -25px rgba(0,0,0,.7);
+}
+.vessel-card-image {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform .8s ease;
+}
+.vessel-card:hover .vessel-card-image { transform: scale(1.05); }
+.vessel-card-shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(6,21,34,.05) 0%, rgba(6,21,34,.4) 35%, rgba(6,21,34,.95) 75%, rgba(6,21,34,.98) 100%);
+}
+.vessel-card-body {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: 32px 30px;
+  color: #fff;
+  z-index: 2;
+}
+.vessel-card-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  color: var(--button-blue);
+  margin-bottom: 14px;
+  padding: 5px 11px;
+  border: 1px solid rgba(111,174,200,0.4);
+  border-radius: 3px;
+  background: rgba(111,174,200,0.1);
+}
+.vessel-card h3 {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0 0 14px;
+  letter-spacing: -.01em;
+  text-shadow: 0 2px 12px rgba(0,0,0,.4);
+}
+.vessel-specs {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+.vessel-specs span {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: rgba(255,255,255,.78);
+  padding: 5px 12px;
+  background: rgba(255,255,255,.08);
+  border-radius: 3px;
+  border: 1px solid rgba(255,255,255,.14);
+}
+.vessel-card p {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: rgba(255,255,255,.85);
+  margin: 0 0 18px;
+  text-shadow: 0 1px 6px rgba(0,0,0,.45);
+}
+.vessel-features {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255,255,255,.12);
+}
+.vessel-features li {
+  font-size: 13px;
+  color: rgba(255,255,255,.85);
+  position: relative;
+  padding-left: 20px;
+}
+.vessel-features li::before {
+  content:'';
+  position: absolute;
+  left: 0; top: 7px;
+  width: 10px; height: 2px;
+  background: var(--accent-red);
+}
+
+/* ============================================================
+   SAILING IN — image overlay section
+   ============================================================ */
+.section-sailing {
+  position: relative;
+  overflow: hidden;
+  background: var(--navy-deepest);
+  padding: 130px 0;
+}
+.sailing-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(.55);
+}
+.sailing-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(105deg, rgba(6,21,34,.96) 0%, rgba(6,21,34,.78) 35%, rgba(6,21,34,.45) 65%, rgba(6,21,34,.3) 100%);
+}
+.sailing-grid {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+  color: #fff;
+}
+.sailing-text .eyebrow { margin-top: 0; }
+.sailing-lead {
+  font-size: 17.5px;
+  line-height: 1.75;
+  color: rgba(255,255,255,.88);
+  margin: 0 0 36px;
+}
+.sailing-lead strong { color: #fff; font-weight: 700; }
+.sailing-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-bottom: 40px;
+}
+.sailing-stat {
+  padding: 22px 22px;
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 6px;
+  transition: background .3s ease, border-color .3s ease;
+}
+.sailing-stat:hover {
+  background: rgba(111,174,200,.1);
+  border-color: rgba(111,174,200,.35);
+}
+.sailing-stat-num {
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--button-blue);
+  line-height: 1;
+  margin-bottom: 8px;
+  font-family: var(--display);
+  letter-spacing: -.02em;
+}
+.sailing-stat-num small {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(143,204,229,.7);
+  margin-left: 2px;
+  vertical-align: super;
+}
+.sailing-stat-label {
+  font-size: 13px;
+  color: rgba(255,255,255,.78);
+  line-height: 1.45;
+  letter-spacing: .02em;
+}
+.sailing-docs {
+  margin-bottom: 32px;
+}
+.sailing-docs-label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  color: var(--accent-red);
+  margin-bottom: 16px;
+}
+.docs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.docs-list li {
+  position: relative;
+  padding-left: 28px;
+  color: rgba(255,255,255,.88);
+  font-size: 15px;
+}
+.docs-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0; top: 0;
+  color: var(--button-blue);
+  font-weight: 700;
+}
+
+/* ============================================================
+   USA — duty-free benefit section
+   ============================================================ */
+.section-usa {
+  background: linear-gradient(180deg, var(--paper) 0%, var(--off-white) 100%);
+  padding: 130px 0;
+}
+.usa-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 80px;
+  align-items: center;
+}
+.usa-image {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+}
+.usa-image::before {
+  content:'';
+  position: absolute;
+  top: -14px; left: -14px;
+  width: 80px; height: 80px;
+  border-top: 4px solid var(--accent-red);
+  border-left: 4px solid var(--accent-red);
+  z-index: 2;
+}
+.usa-image::after {
+  content:'';
+  position: absolute;
+  bottom: -14px; right: -14px;
+  width: 80px; height: 80px;
+  border-bottom: 4px solid var(--button-blue);
+  border-right: 4px solid var(--button-blue);
+}
+.usa-image img {
+  width: 100%;
+  height: 580px;
+  object-fit: cover;
+}
+.usa-image-tag {
+  position: absolute;
+  top: 22px;
+  left: 22px;
+  padding: 9px 16px;
+  background: rgba(11,30,46,.82);
+  backdrop-filter: blur(6px);
+  color: #fff;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  font-weight: 700;
+  border-radius: 3px;
+  z-index: 3;
+}
+.usa-text .eyebrow { margin-top: 0; }
+.usa-text > p {
+  font-size: 16.5px;
+  line-height: 1.75;
+  color: var(--ink-mid);
+  margin: 0 0 30px;
+}
+.usa-text > p strong { color: var(--ink); }
+.usa-benefits {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px 30px;
+  margin-bottom: 30px;
+}
+.usa-benefit {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.usa-benefit-num {
+  flex-shrink: 0;
+  font-size: 34px;
+  font-weight: 700;
+  color: var(--accent-red);
+  line-height: 1;
+  font-family: var(--display);
+  letter-spacing: -.02em;
+  min-width: 56px;
+}
+.usa-benefit-num span {
+  font-size: 18px;
+  color: var(--ink-mid);
+  vertical-align: top;
+  font-weight: 500;
+}
+.usa-benefit h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 4px;
+  color: var(--ink);
+}
+.usa-benefit p {
+  margin: 0;
+  font-size: 13.5px;
+  color: var(--ink-mid);
+  line-height: 1.55;
+}
+.usa-cost-note {
+  padding: 16px 22px;
+  background: rgba(217,60,46,.06);
+  border-left: 3px solid var(--accent-red);
+  color: var(--ink);
+  font-size: 14px;
+  border-radius: 0 4px 4px 0;
+  margin: 0;
+  line-height: 1.65;
+}
+
+/* ============================================================
+   REGISTRATION — 3-up with featured testimonial
+   ============================================================ */
+.section-registration { padding-bottom: 200px; }
+.registration-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1fr;
+  gap: 26px;
+  align-items: stretch;
+}
+.registration-card {
+  padding: 38px 32px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+.registration-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--button-blue);
+  margin-bottom: 16px;
+  padding: 5px 11px;
+  border: 1px solid rgba(111,174,200,0.3);
+  border-radius: 3px;
+  background: rgba(111,174,200,0.08);
+  align-self: flex-start;
+}
+.registration-card h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 14px;
+  color: #fff;
+  letter-spacing: -.01em;
+}
+.registration-card > p {
+  font-size: 15px;
+  color: rgba(255,255,255,.78);
+  line-height: 1.7;
+  margin: 0 0 22px;
+}
+.reg-states {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-top: auto;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255,255,255,.1);
+}
+.reg-states li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: rgba(255,255,255,.84);
+  font-size: 14px;
+}
+.reg-states li span {
+  width: 6px;
+  height: 6px;
+  background: var(--accent-red);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.reg-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: auto;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255,255,255,.1);
+}
+.reg-contact-block {
+  font-size: 14px;
+  color: rgba(255,255,255,.9);
+  line-height: 1.5;
+}
+.reg-contact-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: var(--button-blue);
+  margin-bottom: 4px;
+}
+
+.registration-feature {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  min-height: 500px;
+  box-shadow: 0 30px 60px -25px rgba(0,0,0,.6);
+}
+.registration-feature img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+}
+.registration-feature-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(6,21,34,.55) 0%, rgba(6,21,34,.4) 40%, rgba(6,21,34,.95) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 36px 32px;
+  color: #fff;
+}
+.registration-feature-quote {
+  font-size: 18px;
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1.5;
+  margin-bottom: 16px;
+  border-left: 3px solid var(--accent-red);
+  padding-left: 18px;
+}
+.registration-feature-attr {
+  font-size: 13px;
+  color: rgba(255,255,255,.78);
+  letter-spacing: 0.02em;
+}
+.registration-feature-attr strong { color: #fff; font-weight: 600; }
+
+/* ============================================================
+   MISTAKES — reversed
+   ============================================================ */
+.mistakes-grid-reverse .mistakes-image { order: 2; }
+.mistakes-grid-reverse .mistakes-text { order: 1; }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1100px) {
+  .vessel-grid { grid-template-columns: 1fr; }
+  .vessel-card { min-height: 460px; }
+  .usa-grid { grid-template-columns: 1fr; gap: 50px; }
+  .usa-image img { height: 420px; }
+  .registration-grid { grid-template-columns: 1fr; }
+  .registration-feature { min-height: 380px; }
+  .mistakes-grid-reverse .mistakes-image,
+  .mistakes-grid-reverse .mistakes-text { order: 0; }
+  .sailing-grid { max-width: 100%; }
+  .sailing-grid-2 { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 720px) {
+  .section-sailing { padding: 90px 0; }
+  .sailing-grid-2 { grid-template-columns: 1fr; }
+  .sailing-stat-num { font-size: 34px; }
+  .usa-benefits { grid-template-columns: 1fr; }
+  .vessel-card-body { padding: 26px 24px; }
+  .registration-card { padding: 30px 26px; }
+}

@@ -1,0 +1,57 @@
+/* ============================================================
+   DAZMAC — Import a Car From the USA — page-specific styles
+   Inherits everything from styles.css
+   ============================================================ */
+
+/* Hero — the muscle car sits on the right, keep it framed */
+.hero-usa .hero-media {
+  background-position: 68% center;
+}
+
+/* ============================================================
+   MOBILE — restack the US vehicle-type cards so long copy is
+   never clipped (image banner + text panel, content-driven height)
+   ============================================================ */
+@media (max-width: 1100px) {
+  .section-origins .origins-grid { grid-auto-rows: auto; }
+  .section-origins .origin-card,
+  .section-origins .origin-card-large {
+    grid-row: auto;
+    height: auto;
+    background: linear-gradient(180deg, #0d2336 0%, #0a1c2d 100%);
+    display: flex;
+    flex-direction: column;
+  }
+  .section-origins .origin-card-image {
+    position: relative;
+    inset: auto;
+    height: 220px;
+    flex-shrink: 0;
+  }
+  .section-origins .origin-card-shade {
+    height: 220px;
+    bottom: auto;
+    background: linear-gradient(180deg, rgba(6,21,34,.45) 0%, rgba(6,21,34,0) 55%);
+  }
+  .section-origins .origin-card-body {
+    position: static;
+    padding: 22px 26px 26px;
+  }
+  .section-origins .origin-card h3,
+  .section-origins .origin-card-large h3 {
+    font-size: 23px;
+    text-shadow: none;
+  }
+  .section-origins .origin-card p,
+  .section-origins .origin-card-large p {
+    font-size: 14.5px;
+    max-width: none;
+    text-shadow: none;
+  }
+  .section-origins .origin-card:hover { transform: none; }
+}
+
+@media (max-width: 720px) {
+  .section-origins .origin-card-image { height: 190px; }
+  .section-origins .origin-card-shade { height: 190px; }
+}

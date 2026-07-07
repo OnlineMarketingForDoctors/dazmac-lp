@@ -1,0 +1,212 @@
+/* ============================================================
+   DAZMAC — Car Exports From Australia — page-specific styles
+   Inherits everything from styles.css
+   ============================================================ */
+
+/* Hero — slight zoom-in / position to keep the car visible on right */
+.hero-exports .hero-media {
+  background-position: 60% center !important;
+  transform: scale(1.04);
+}
+
+/* ============================================================
+   REASONS — 4 cards + featured testimonial image
+   ============================================================ */
+.section-reasons {
+  background: linear-gradient(180deg, var(--paper) 0%, var(--off-white) 100%);
+  padding: 130px 0;
+}
+.reasons-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  margin-bottom: 60px;
+}
+.reason-card {
+  padding: 36px 28px;
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  box-shadow: 0 12px 30px -16px rgba(11,30,46,.12);
+  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+  position: relative;
+}
+.reason-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 50px -18px rgba(11,30,46,.22);
+  border-color: rgba(111,174,200,0.45);
+}
+.reason-icon {
+  width: 56px; height: 56px;
+  background: rgba(111,174,200,.14);
+  border-radius: 12px;
+  display: grid; place-items: center;
+  color: var(--teal-mid);
+  margin-bottom: 22px;
+}
+.reason-icon svg { width: 30px; height: 30px; }
+.reason-card h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 10px;
+  color: var(--ink);
+  letter-spacing: -.01em;
+}
+.reason-card p {
+  margin: 0;
+  font-size: 14.5px;
+  color: var(--ink-mid);
+  line-height: 1.65;
+}
+
+.reasons-feature {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  min-height: 380px;
+}
+.reasons-feature img {
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+}
+.reasons-feature-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(11,30,46,.95) 0%, rgba(11,30,46,.75) 50%, rgba(11,30,46,.15) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px 70px;
+  color: #fff;
+}
+.reasons-feature-quote {
+  font-size: 24px;
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1.5;
+  max-width: 620px;
+  margin-bottom: 22px;
+  border-left: 3px solid var(--accent-red);
+  padding-left: 22px;
+}
+.reasons-feature-attr {
+  font-size: 14px;
+  color: rgba(255,255,255,.78);
+  letter-spacing: 0.02em;
+}
+.reasons-feature-attr strong {
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ============================================================
+   SHIPPING METHODS
+   ============================================================ */
+.section-methods {
+  padding-bottom: 180px;
+}
+.methods-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.method-card {
+  padding: 44px 36px 38px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 10px;
+  transition: transform .3s ease, background .3s ease, border-color .3s ease;
+  position: relative;
+}
+.method-card:hover {
+  transform: translateY(-6px);
+  background: rgba(111,174,200,.08);
+  border-color: rgba(111,174,200,.32);
+}
+.method-card-feature {
+  background: rgba(111,174,200,.07);
+  border-color: rgba(111,174,200,.28);
+  box-shadow: 0 30px 60px -25px rgba(0,0,0,.45);
+}
+.method-card-feature::before {
+  content:'';
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  height: 3px;
+  width: 64px;
+  background: var(--accent-red);
+  border-radius: 0 0 3px 3px;
+}
+.method-card-icon {
+  width: 72px;
+  height: 72px;
+  color: var(--button-blue);
+  margin-bottom: 24px;
+}
+.method-card-icon svg {
+  width: 72px;
+  height: 72px;
+}
+.method-tag {
+  display: inline-block;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  color: var(--accent-red);
+  margin-bottom: 14px;
+  padding: 5px 11px;
+  border: 1px solid rgba(217,60,46,.4);
+  border-radius: 3px;
+  background: rgba(217,60,46,.08);
+}
+.method-card h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 14px;
+  color: #fff;
+  letter-spacing: -.01em;
+}
+.method-card > p {
+  font-size: 14.5px;
+  color: rgba(255,255,255,.78);
+  line-height: 1.65;
+  margin: 0 0 22px;
+}
+.method-features {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255,255,255,.12);
+}
+.method-features li {
+  position: relative;
+  padding-left: 22px;
+  color: rgba(255,255,255,.88);
+  font-size: 14px;
+}
+.method-features li::before {
+  content:'';
+  position: absolute;
+  left: 0; top: 9px;
+  width: 11px; height: 2px;
+  background: var(--accent-red);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1100px) {
+  .reasons-grid { grid-template-columns: repeat(2, 1fr); }
+  .methods-grid { grid-template-columns: 1fr; }
+  .reasons-feature-overlay { padding: 36px 32px; }
+  .reasons-feature-quote { font-size: 20px; }
+}
+
+@media (max-width: 720px) {
+  .reasons-grid { grid-template-columns: 1fr; }
+}

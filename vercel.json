@@ -1,0 +1,56 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    { "source": "/", "destination": "/landing-page/index.html" },
+    { "source": "/boats", "destination": "/landing-page/boats.html" },
+    { "source": "/boats.html", "destination": "/landing-page/boats.html" },
+    { "source": "/boats-usa", "destination": "/landing-page/boats-usa.html" },
+    { "source": "/boats-usa.html", "destination": "/landing-page/boats-usa.html" },
+    { "source": "/boats-nz", "destination": "/landing-page/boats-nz.html" },
+    { "source": "/boats-nz.html", "destination": "/landing-page/boats-nz.html" },
+    { "source": "/exports", "destination": "/landing-page/exports.html" },
+    { "source": "/exports.html", "destination": "/landing-page/exports.html" },
+    { "source": "/insurance", "destination": "/landing-page/insurance.html" },
+    { "source": "/insurance.html", "destination": "/landing-page/insurance.html" },
+    { "source": "/usa", "destination": "/landing-page/usa.html" },
+    { "source": "/usa.html", "destination": "/landing-page/usa.html" },
+    { "source": "/japan", "destination": "/landing-page/japan.html" },
+    { "source": "/japan.html", "destination": "/landing-page/japan.html" },
+    { "source": "/nz", "destination": "/landing-page/nz.html" },
+    { "source": "/nz.html", "destination": "/landing-page/nz.html" },
+    { "source": "/uk", "destination": "/landing-page/uk.html" },
+    { "source": "/uk.html", "destination": "/landing-page/uk.html" },
+    { "source": "/singapore", "destination": "/landing-page/singapore.html" },
+    { "source": "/singapore.html", "destination": "/landing-page/singapore.html" },
+    { "source": "/styles.css", "destination": "/landing-page/styles.css" },
+    { "source": "/boats.css", "destination": "/landing-page/boats.css" },
+    { "source": "/exports.css", "destination": "/landing-page/exports.css" },
+    { "source": "/insurance.css", "destination": "/landing-page/insurance.css" },
+    { "source": "/usa.css", "destination": "/landing-page/usa.css" },
+    { "source": "/japan.css", "destination": "/landing-page/japan.css" },
+    { "source": "/nz.css", "destination": "/landing-page/nz.css" },
+    { "source": "/uk.css", "destination": "/landing-page/uk.css" },
+    { "source": "/singapore.css", "destination": "/landing-page/singapore.css" },
+    { "source": "/images/:file", "destination": "/landing-page/images/:file" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "noindex, nofollow" }
+      ]
+    },
+    {
+      "source": "/landing-page/images/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/images/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    }
+  ]
+}

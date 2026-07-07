@@ -1,0 +1,11 @@
+# Vercel / local tooling
+.vercel
+.claude
+.DS_Store
+**/.DS_Store
+
+# Reference & source artifacts (not part of the deployed site; see .vercelignore)
+car-import-pages/
+screenshots/
+logo/
+landing-page/images-original-png/
